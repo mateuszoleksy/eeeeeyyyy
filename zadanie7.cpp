@@ -3,27 +3,27 @@
 
 using namespace std;
 
-void bin(long long n)
+int divider(int n)
 {
 
-    if (n > 1)
-        bin(n >> 1);
-
-    cout << (n % 2);
+    for (int i = 2; i < n; i++)
+    {
+        if (n % i == 0)
+        {
+            return n / i;
+        }
+    }
+    return n;
 }
 
 int main()
 {
-    long long enter;
+    int enter;
     try
     {
-        while (1)
-        {
-            cout << "Enter number to see binary representation: \n";
-            cin >> enter;
-            bin(enter);
-            cout << endl;
-        }
+        cout << "Enter number : \n";
+        cin >> enter;
+        cout << divider(enter) << endl;
     }
     catch (exception& e)
     {
