@@ -12,7 +12,7 @@ tuple <float, float> func(vector<float>* tab)
     float average, standard{ 0 };
     float sum;
 
-    for (iterator i = tab->begin(); i < tab->end(); i++)
+    for (auto i = tab->begin(); i < tab->end(); i++)
     {
         sum += *i;
     }
