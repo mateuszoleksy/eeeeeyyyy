@@ -1,9 +1,6 @@
 
 #include <iostream>
 #include <cmath>
-#include <random>
-#include <chrono>
-#include <vector>
 
 using namespace std;
 
