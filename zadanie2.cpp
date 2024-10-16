@@ -14,7 +14,7 @@ class TQuadEq
         double delta;
         double root_1;
         double root_2;
-        TQuadEq() {};
+        TQuadEq();
         TQuadEq(double a1, double b1, double c1):a(a1),b(b1),c(c1),root_1(0.0),root_2(0.0){};
         void TQuadEqSetA (double a1);
         void TQuadEqSetB (double b1);
@@ -58,10 +58,11 @@ int TQuadEq::GetNumRoots(const double delta)
         root_1 = -b/(2*a);
         root_1 = root_2;
         return 1;
-    } else if (sqrt(delta) < 0)
+    } else
     {
         return 0;
     }
+    return 0;
 };
 
 void TQuadEq::TQuadEqSetA(double a1)
